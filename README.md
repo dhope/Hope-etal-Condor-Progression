@@ -58,7 +58,7 @@ Modify the `siteibm.ctl` control file to modify the paramaters for the model.
 
 ## Script Authors
 
-* **David Hope** - *All coding* - [David Hope](www.davidhope.ca)
+* **David Hope** - *Coding and bug testing* - [David Hope](http://www.davidhope.ca)
 
 Co-authors on the manuscript provided input into the methodology. Their information is
 described in the text.
