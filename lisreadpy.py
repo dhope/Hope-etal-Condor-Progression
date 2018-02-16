@@ -3,7 +3,7 @@ Function to import variables into a dictionary from a
 control file. File must be formated with '##' for comments,
 '#'' for variable names and values on the following line
 Updated April 13 to import dictionaries if formatted correctly
-Created by David Hope based on 'lisread.r' by Dr. Sean Cox 
+Created by David Hope based on 'lisread.r' by Dr. Sean Cox (SFU)
 """
 import numpy as np
 from ast import literal_eval

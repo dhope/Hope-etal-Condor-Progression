@@ -1,6 +1,7 @@
 ## Analysis of trends in peak passage estimates
 ## David Hope
 ## December 8, 2016
+## Final analysis moved to Post-hoc_analysis.R
 ###################################
 options(warn = -1)
 require(tidyverse)
@@ -18,7 +19,7 @@ siteLat <- data.frame(SITE=c('HART', 'CRD', 'KABA', 'RBBP', 'TOFN', 'KENN'),#sit
   				mutate(d2Breeding = mean(c(Bethel, Emmonak, Nome)))
 
 
-mu <- readRDS("./cleanVersions/datafiles/MuEstimates_w_Hart_w_supp.rds") %>% 
+mu <- readRDS("./.data/MuEstimates_w_Hart_w_supp.rds") %>% 
 	  mutate(Year=as.numeric(as.character(YEAR))) %>%
 	  left_join(siteLat, by = "SITE") %>% 
 	  mutate(SD = exp(SIGMA), # Convert estimate to SD
@@ -120,7 +121,7 @@ data.for.analysis <- wesa %>%
 			       yr_standardize = arm::rescale(Year),
 			       Lat_std = arm::rescale(Lat),
 			       d2b.st = arm::rescale(d2Breeding) )
-
+# write_rds(data.for.analysis, "./.data/mudat.rds") # or dunlinMu.rds for DUNL
 
 ## Model comparisons
 mixedModel_ML <- lmer(MU ~ Lat_std*yr_standardize + (1|SITE), data = data.for.analysis,  REML =F)

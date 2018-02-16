@@ -92,7 +92,7 @@ Spacing_plot <-
                       ymax= conf.high))   + scale_shape_manual( values = c(19, 17, 15, 2, 1)) +
   # ggthemes::theme_few() + #scale_colour_grey() +  #scale_y_continuous(breaks = c(seq(-7,7,2))) +
   theme(legend.position = 'bottom')+#, legend.text = element_text(size=6), text = element_text(size=8)) +
-  labs(shape = "Survey Initiation Day", y = "Deviation from true peak date (days)", x = "Days between Surveys")
+  labs(shape = "Survey Initiation Day", y = "Deviation from\ntrue peak date (days)", x = "Days between Surveys")
 
 
 N_plot <- 
@@ -102,10 +102,13 @@ ggplot(N_boot, aes(N, mn)) +
                       ymax= conf.high)) +
   # ggthemes::theme_few() +
   labs(x = "Number of Days Surveyed",
-       y= "Deviation from true peak date (days)") + 
+       y= "Deviation from\ntrue peak date (days)") + 
   # scale_y_continuous(breaks = c(seq(-6,6))) +
   geom_vline(xintercept = 7, linetype = 2, alpha = 0.4)
 
 
 
-Figure2 <- plot_grid(Spacing_plot, N_plot, labels = c("A", "B"),nrow = 2, align = "v")
+Figure6 <- plot_grid(Spacing_plot, N_plot, labels = c("(A)", "(B)"),nrow = 2, align = "v",
+                     label_fontfamily = 'times', hjust = -0, vjust = 1.0)
+
+ggsave("../6th Submission/Figure6.tiff", width = 3.5, height = 7, dpi=600, units = 'in')

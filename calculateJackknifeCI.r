@@ -1,4 +1,5 @@
 require(tidyverse)
+# Data calculated using muEstimation.R 
 jack.all <- readRDS("./cleanVersions/datafiles/jackknifeResults_w_Hart_w_supp.rds") 
 mu.all <- readRDS("./cleanVersions/datafiles/MuEstimates_w_Hart_w_supp.rds") 
 
