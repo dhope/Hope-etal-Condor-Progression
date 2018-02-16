@@ -67,14 +67,14 @@ Modify the `siteibm.ctl` control file to modify the paramaters for the model. Th
 
 The power analysis can be run using in R using `R source("Simulation1.r")`. To recreate the data from scratch, you will need to uncomment lines 51-57 and run the simulations again.
 
+
 ### Analysis of peak passage
 
 The final analysis presented in __Hope et al. Migratory Progression of Shorebirds__ can be run using `Post-hoc_analysis.R`. The data is imported from rds files. The estimated peak passaged dates are described in detail in Supplementary Table S1 of the paper. The function used to calculate the dates of peak passage is shown in `muEstimation.R`. Data cleaning and modifications from raw data are shown in `data.clean.r`, except for Copper River and Hartney data, which are shown in `CRD_HART_data.r`.
 
 
 ## Script Authors
-
-* [**David Hope**](http://www.davidhope.ca) - *Coding and bug testing* - [David Hope]
+* [**David Hope**](http://www.davidhope.ca) - *Coding and bug testing*
 * **Mark Drever** - *Interpolation of species composition* - `HART_species_composition.R` and `CRD_species_composition.R`
 
 Co-authors on the manuscript provided input into the methodology. Their information is
