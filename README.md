@@ -65,7 +65,7 @@ Modify the `siteibm.ctl` control file to modify the paramaters for the model. Th
 
 ### Power analysis
 
-The power analysis can be run using in R using `R source("Simulation1.r")`. To recreate the data from scratch, you will need to uncomment lines 51-57 and run the simulations again.
+The power analysis can be run using in R using `source("Simulation1.r")`. To recreate the data from scratch, you will need to uncomment lines 51-57 and run the simulations again.
 
 
 ### Analysis of peak passage
